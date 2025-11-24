@@ -10,7 +10,7 @@
     <meta name="author" content="Valorwide">
     <meta name="description" content="Axispro Business & corporate agency HTML template">
     <!-- ======== Page title ============ -->
-    <title>Alyssa Metal Contact</title>
+    <title>Alyssa Metal Home</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/alyssa-favicon.png">
     <!--<< Bootstrap min.css >>-->
@@ -29,8 +29,6 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
 
 
 
@@ -158,153 +156,258 @@
 
 
 
-        .contact-hero {
-            /* position: relative; */
-            /* width: 100%; */
-            height: 60vh;
-            /* matches screenshot height */
-            background: url("assets/img/images/alyssa-contact-hero.jpg") no-repeat center center/cover;
-            display: flex;
-            align-items: flex-start;
-            color: white;
-            /* opacity: 0.9; */
-        }
-
-        /* soft dark overlay */
-        /* .contact-hero::before {
-    content: "";
-    top: 2rem;
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.444); 
-    z-index: 1;
-} */
-
-        .contact-hero .container {
+        .hero-aboutus {
             position: relative;
-            z-index: 2;
-        }
-
-        /* top small text */
-        .sub-text {
-            font-size: 0.95rem;
-            /* opacity: 0.85; */
-            margin-bottom: 10px;
-        }
-
-        /* heading */
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 500;
-            line-height: 1.2;
-            margin: 0;
-            color: white;
-        }
-
-
-
-
-
-
-        .contact-section {
-            background: #000;
-            padding: 3rem 0;
-            color: white;
-            font-family: "Inter", sans-serif;
-        }
-
-        /* LEFT COLUMN INFO BLOCKS */
-        .info-box {
-            background: #008E3E;
-            padding: 14px 25px;
-            color: white;
-            font-size: 1rem;
+            width: 100vw;
+            height: 90vh;
+            background: url('assets/img/images/alyssa-about-hero.jpg');
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
+            /* show whole image */
+            /* object-fit: cover; */
+            /* background-position:center; */
+            /* background-repeat: no-repeat; */
             display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 3px solid black;
+            align-items: flex-end;
+            /* padding: 100px 40px; */
+            /* z-index: -1; */
+            /* top: -56px; */
+
         }
 
-        .info-box i {
-            font-size: 1.3rem;
-        }
 
-        /* IMAGE BLOCK */
-        .info-image img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            height: 20rem;
-        }
 
-        /* RIGHT COLUMN */
-        .form-area {
-            padding: 0rem 3rem;
-        }
-
-        .form-title {
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 10px;
+        .hero-content {
+            position: relative;
+            z-index: 5;
             color: white;
+            max-width: 900px;
+            padding-bottom: 3rem;
+            padding-left: 3rem;
         }
 
-        .form-subtitle {
-            opacity: 0.8;
-            font-size: 0.7rem;
-            line-height: 1.3;
-        }
-
-        /* FORM ELEMENTS */
-        label {
-            font-size: 0.8rem;
-            margin-bottom: 1px;
+        .hero-content .label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 15px;
             opacity: 0.9;
         }
 
-        /* input:focus{
-    background-color: #000;
-       } */
-
-        .form-control,
-        .message-box {
-            background: transparent;
-            border: 1px solid #444;
-            padding: 9px;
-            border-radius: 8px;
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 1.2;
             color: white;
         }
 
-        .form-control::placeholder {
-            font-size: 0.8rem;
+        .expertise-section {
+
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: #000;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background 0.6s ease-in-out;
         }
 
-        .form-control::placeholder,
-        .message-box::placeholder {
-            color: #888;
+        /* IMAGE */
+        .expertise-image {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            /* hidden initially */
+            width: 100%;
+            height: 100%;
+            background: url('assets/img/images/alyssa-about1.jpg') center/cover no-repeat;
+            transition: all 1.5s ease;
         }
 
-        .message-box {
-            height: 150px;
-        }
+        /* GREEN CARD */
+        .expertise-card {
+            position: absolute;
+            right: -100%;
+            /* hidden initially */
 
-        /* BUTTON */
-        .send-btn {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55%;
             background: #008E3E;
-            padding: 9px 28px;
             color: white;
-            border-radius: 40px;
-            font-size: 0.9rem;
+            padding: 3rem 3rem 3rem 3rem;
+            border-radius: 6px;
+            transition: all 1.5s ease;
+            opacity: 0;
         }
 
-        .send-btn:hover {
-            background: #008E3E;
+        /* WHEN ACTIVE (CLICKED) */
+        .expertise-section.active {
+            background: #000;
+        }
+
+        .expertise-section.active .expertise-image {
+            left: 0;
+            /* slide image into view */
+        }
+
+        .expertise-section.active .expertise-card {
+            right: 0.1%;
+            /* slide card into view */
+            opacity: 1;
+        }
+
+        /* REVERSE ANIMATION */
+        .expertise-section:not(.active) .expertise-image {
+            left: -100%;
+        }
+
+        .expertise-section:not(.active) .expertise-card {
+            right: -100%;
+            opacity: 0;
+        }
+
+        /* Text styling */
+        .expertise-card h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
             color: white;
+        }
+
+        .expertise-card p {
+            margin-top: 10px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+
+
+        .offer-section {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* GREEN LEFT SIDE */
+        .offer-left {
+            width: 100%;
+            background: #009345;
+            color: white;
+            padding: 40px;
+            transition: all 0.8s ease;
+        }
+
+        .offer-left h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .offer-left p {
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .offer-img {
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 10px;
+            max-height: 290px;
+            object-fit: cover;
+        }
+
+        /* GREY RIGHT SIDE - Hidden initially */
+        .offer-right {
+            position: absolute;
+            top: 0;
+            right: -35%;
+            /* hidden off-screen */
+            width: 35%;
+            height: 100%;
+            background: #1E1E1E;
+            color: white;
+            padding: 50px 40px;
+            transition: all 0.8s ease;
+        }
+
+        .offer-right .item {
+            margin-bottom: 35px;
+            border-bottom: 1px solid #008E3E;
+            /* padding-bottom: 5px; */
+        }
+
+        .offer-right h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .offer-right p {
+            color: #d0d0d0;
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* WHEN ACTIVE (CLICKED) */
+        .offer-section.active .offer-right {
+            right: 0;
+        }
+
+        .offer-section.active .offer-left {
+            width: 65%;
+            /* Green area becomes 70% */
+        }
+
+        /* When inactive (clicked again) */
+        .offer-section:not(.active) .offer-right {
+            right: -35%;
+        }
+
+        .offer-section:not(.active) .offer-left {
+            width: 100%;
+        }
+
+        .values-section {
+            background: #000;
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        .values-title {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+
+        .value-card {
+            background: #1e1e1e;
+            padding: 35px 30px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .icon-wrap {
+            font-size: 45px;
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .value-heading {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .value-text {
+            color: #b5b5b5;
+            font-size: 0.85rem;
+            line-height: 1.4;
         }
     </style>
-
-
-
 
 
 
@@ -481,7 +584,7 @@
                                     alt="logo-img">
                             </a>
                         </div>
-                        <div class="mean__menu-wrapper" style="border-left: 2px solid white; padding-left: 22px;">
+                        <div class="mean__menu-wrapper" style="    border-left: 2px solid white; padding-left: 22px;">
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
@@ -531,102 +634,148 @@
         </div>
     </header>
 
-    <section class="contact-hero d-flex align-items-center">
+
+
+    <section class="hero-aboutus">
+        <div class="hero-content">
+            <span class="label">About Us</span>
+            <h1>Empowering Industries with <br> Premium Metal Resources</h1>
+        </div>
+    </section>
+
+
+    <section class="text-white" style="background-color: #000; padding-top: 6rem;">
+        <div class="container-fluid text-center d-flex align-items-center justify-content-center">
+            <p>Alyssa Metal is a leading scrap metal trader based in the United Arab Emirates, <br> specializing in the
+                supply of high-quality ferrous and non-ferrous scrap to <br> industries across the globe. With a deep
+                focus
+                on transparency, efficiency, and <br> reliability, we operate at the heart of the global recycling
+                community
+                to <br> support sustainable industrial production.</p>
+        </div>
+    </section>
+    <section style="background-color: #000; height: 5rem;"></section>
+
+
+    <section class="expertise-section" id="expertiseSection">
+        <div class="expertise-image"></div>
+
+        <div class="expertise-card">
+            <h2>Our Expertise</h2>
+            <p>
+                Backed by years of expertise in sourcing, grading, and exporting <br> scrap metals, Alyssa Metal offers
+                a dependable bridge between <br> suppliers and buyers. From aluminium and copper to steel and mixed <br>
+                alloys, we manage a diverse portfolio of materials catering to the <br> needs of re-melters, refiners,
+                and manufacturers worldwide.
+            </p>
+        </div>
+    </section>
+
+    <section style="background-color: #000; height: 3rem;"></section>
+
+
+    <section class="offer-section" id="offerSection">
+
+        <!-- LEFT GREEN CONTENT -->
+        <div class="offer-left">
+            <h2 class="text-white">What We Offer</h2>
+            <p>
+                We provide consistent, clean, and quality-controlled materials for recycling and
+                production purposes. Our operations are built on
+            </p>
+
+            <img src="assets/img/images/alyssa-about2.jpg" class="offer-img">
+        </div>
+
+        <!-- RIGHT GREY CONTENT -->
+        <div class="offer-right text-white" style="display: flex; flex-direction: column; justify-content: center   ;">
+            <div class="item">
+                <h4 class=" text-white">Reliable Sourcing</h4>
+                <p>Trusted partnerships with local and international yards.</p>
+            </div>
+
+            <div class="item">
+                <h4 class=" text-white">Quality Assurance</h4>
+                <p>All scrap is carefully inspected, sorted, and graded.</p>
+            </div>
+
+            <div class="item">
+                <h4 class=" text-white">Efficient Logistics</h4>
+                <p>Timely delivery with robust shipping and documentation.</p>
+            </div>
+
+            <div class="item">
+                <h4 class=" text-white">Customized Supply</h4>
+                <p>Tailored solutions to meet unique buyer specifications.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="values-section" >
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8" style="padding-top: 8rem;">
-                    <p class="sub-text">Contact Us</p>
-                    <h1 class="hero-title">
-                        Let’s Build Strong,<br>
-                        Sustainable Partnerships
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </section>
 
+            <h2 class="values-title mb-5">Our Values</h2>
 
-    <section class="contact-section">
-        <div class="container-fluid px-5">
-            <div class="d-flex">
+            <div class="row g-4">
 
-                <!-- LEFT COLUMN -->
-                <div class="col-lg-6 p-0">
-
-                    <div class="info-box">
-                        <i class="bi bi-globe"></i>
-                        http://alyssametal.com/
+                <!-- Card 1 -->
+                <div class="col-md-3">
+                    <div class="value-card">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </div>
+                        <h5 class="value-heading">Integrity</h5>
+                        <p class="value-text">
+                            Ethical sourcing and complete transparency.
+                        </p>
                     </div>
-
-                    <div class="info-box">
-                        <i class="bi bi-envelope"></i>
-                        info@alyssametal.com
-                    </div>
-
-                    <div class="info-box">
-                        <i class="bi bi-telephone"></i>
-                        +971 5468254682
-                    </div>
-
-                    <div class="info-box" style="line-height: 1.1;">
-                        <i class="bi bi-geo-alt"></i>
-                        Office 203, Jebel Ali Free Zone (JAFZA)<br>
-                        Dubai, United Arab Emirates
-                    </div>
-
-                    <div class="info-image">
-                        <img src="assets/img/images/alyssa-contact-form.jpg" alt="Office">
-                    </div>
-
                 </div>
 
-                <!-- RIGHT COLUMN -->
-                <div class="col-lg-6 form-area">
-
-                    <h2 class="form-title">Send Us a Message</h2>
-                    <p class="form-subtitle">
-                        Have a question or need a custom quotation?<br>
-                        Fill out the form below and our team will get back to you shortly.
-                    </p>
-
-                    <div class="row g-2 mt-1">
-
-                        <div class="col-md-6">
-                            <label>Your Name*</label>
-                            <input type="text" class="form-control" placeholder="Your name">
+                <!-- Card 2 -->
+                <div class="col-md-3">
+                    <div class="value-card">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-award"></i>
                         </div>
-
-                        <div class="col-md-6">
-                            <label>Phone*</label>
-                            <input type="text" class="form-control" placeholder="Phone">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Email*</label>
-                            <input type="email" class="form-control" placeholder="Email ID">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Company Name*</label>
-                            <input type="text" class="form-control" placeholder="Company name">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Message</label>
-                            <textarea rows="2" class="form-control message-box" placeholder="Message"></textarea>
-                        </div>
-
-                        <div class="col-12 text-end mt-4">
-                            <button class="btn send-btn">Send Message</button>
-                        </div>
-
+                        <h5 class="value-heading">Quality</h5>
+                        <p class="value-text">
+                            Commitment to high standards in every shipment.
+                        </p>
                     </div>
+                </div>
 
+                <!-- Card 3 -->
+                <div class="col-md-3">
+                    <div class="value-card">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h5 class="value-heading">Sustainability</h5>
+                        <p class="value-text">
+                            Promoting recycling to reduce environmental impact.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3">
+                    <div class="value-card">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h5 class="value-heading">Professionalism</h5>
+                        <p class="value-text">
+                            A skilled team focused on building long-term value.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
+
 
 
 
@@ -752,12 +901,24 @@
 
 
 
+    <script>
+        const offer = document.getElementById("offerSection");
+
+        offer.addEventListener("click", () => {
+            offer.classList.toggle("active");
+        });
+    </script>
 
 
 
 
+    <script>
+        const expertiseSection = document.getElementById("expertiseSection");
 
-
+        expertiseSection.addEventListener("click", () => {
+            expertiseSection.classList.toggle("active");
+        });
+    </script>
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>

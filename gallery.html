@@ -35,39 +35,7 @@
 
 
     <style>
-        .brand-strip {
-            background: #008E3E;
-            /* Your exact green */
-            padding: 15px 20px;
-
-            width: 100%;
-        }
-
-        .brand-row {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .brand-logo {
-            height: 52px;
-            /* Adjust size to match screenshot */
-            object-fit: contain;
-        }
-
-        .brand-center {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .brand-text {
-            color: #fff;
-            font-size: 0.9rem;
-            opacity: 0.95;
-            line-height: 1.2;
-        }
+      
 
 
 
@@ -156,151 +124,89 @@
             /* background-position: center right; */
         }
 
-
-
-        .contact-hero {
-            /* position: relative; */
-            /* width: 100%; */
-            height: 60vh;
-            /* matches screenshot height */
-            background: url("assets/img/images/alyssa-contact-hero.jpg") no-repeat center center/cover;
-            display: flex;
-            align-items: flex-start;
-            color: white;
-            /* opacity: 0.9; */
-        }
-
-        /* soft dark overlay */
-        /* .contact-hero::before {
-    content: "";
-    top: 2rem;
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.444); 
-    z-index: 1;
-} */
-
-        .contact-hero .container {
+        .hero-gallery {
             position: relative;
-            z-index: 2;
-        }
-
-        /* top small text */
-        .sub-text {
-            font-size: 0.95rem;
-            /* opacity: 0.85; */
-            margin-bottom: 10px;
-        }
-
-        /* heading */
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 500;
-            line-height: 1.2;
-            margin: 0;
-            color: white;
-        }
-
-
-
-
-
-
-        .contact-section {
-            background: #000;
-            padding: 3rem 0;
-            color: white;
-            font-family: "Inter", sans-serif;
-        }
-
-        /* LEFT COLUMN INFO BLOCKS */
-        .info-box {
-            background: #008E3E;
-            padding: 14px 25px;
-            color: white;
-            font-size: 1rem;
+            width: 100vw;
+            height: 90vh;
+            background: url('assets/img/images/alyssa-gallery-hero.jpg');
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
+            /* show whole image */
+            /* object-fit: cover; */
+            /* background-position:center; */
+            /* background-repeat: no-repeat; */
             display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 3px solid black;
+            align-items: flex-end;
+            /* padding: 100px 40px; */
+            /* z-index: -1; */
+            /* top: -56px; */
+
         }
 
-        .info-box i {
-            font-size: 1.3rem;
+        .hero-gallery::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            /* dark overlay */
         }
 
-        /* IMAGE BLOCK */
-        .info-image img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            height: 20rem;
-        }
-
-        /* RIGHT COLUMN */
-        .form-area {
-            padding: 0rem 3rem;
-        }
-
-        .form-title {
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 10px;
+        .hero-content {
+            position: relative;
+            z-index: 5;
             color: white;
+            max-width: 900px;
+            padding-bottom: 3rem;
+            padding-left: 3rem;
         }
 
-        .form-subtitle {
-            opacity: 0.8;
-            font-size: 0.7rem;
-            line-height: 1.3;
-        }
-
-        /* FORM ELEMENTS */
-        label {
-            font-size: 0.8rem;
-            margin-bottom: 1px;
+        .hero-content .label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 15px;
             opacity: 0.9;
         }
 
-        /* input:focus{
-    background-color: #000;
-       } */
-
-        .form-control,
-        .message-box {
-            background: transparent;
-            border: 1px solid #444;
-            padding: 9px;
-            border-radius: 8px;
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 1.2;
             color: white;
         }
 
-        .form-control::placeholder {
-            font-size: 0.8rem;
+
+        .gallery-section {
+            background: #070707;
+            padding: 2rem 0;
         }
 
-        .form-control::placeholder,
-        .message-box::placeholder {
-            color: #888;
+        .gallery-text {
+            color: #dcdcdc;
+            font-size: 1rem;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+            padding-top: 3rem;
         }
 
-        .message-box {
-            height: 150px;
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 17rem;
         }
 
-        /* BUTTON */
-        .send-btn {
-            background: #008E3E;
-            padding: 9px 28px;
-            color: white;
-            border-radius: 40px;
-            font-size: 0.9rem;
+        .gallery-caption {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
 
-        .send-btn:hover {
-            background: #008E3E;
-            color: white;
-        }
+
+        
     </style>
 
 
@@ -531,128 +437,150 @@
         </div>
     </header>
 
-    <section class="contact-hero d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8" style="padding-top: 8rem;">
-                    <p class="sub-text">Contact Us</p>
-                    <h1 class="hero-title">
-                        Let’s Build Strong,<br>
-                        Sustainable Partnerships
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-    <section class="contact-section">
-        <div class="container-fluid px-5">
-            <div class="d-flex">
-
-                <!-- LEFT COLUMN -->
-                <div class="col-lg-6 p-0">
-
-                    <div class="info-box">
-                        <i class="bi bi-globe"></i>
-                        http://alyssametal.com/
-                    </div>
-
-                    <div class="info-box">
-                        <i class="bi bi-envelope"></i>
-                        info@alyssametal.com
-                    </div>
-
-                    <div class="info-box">
-                        <i class="bi bi-telephone"></i>
-                        +971 5468254682
-                    </div>
-
-                    <div class="info-box" style="line-height: 1.1;">
-                        <i class="bi bi-geo-alt"></i>
-                        Office 203, Jebel Ali Free Zone (JAFZA)<br>
-                        Dubai, United Arab Emirates
-                    </div>
-
-                    <div class="info-image">
-                        <img src="assets/img/images/alyssa-contact-form.jpg" alt="Office">
-                    </div>
-
-                </div>
-
-                <!-- RIGHT COLUMN -->
-                <div class="col-lg-6 form-area">
-
-                    <h2 class="form-title">Send Us a Message</h2>
-                    <p class="form-subtitle">
-                        Have a question or need a custom quotation?<br>
-                        Fill out the form below and our team will get back to you shortly.
-                    </p>
-
-                    <div class="row g-2 mt-1">
-
-                        <div class="col-md-6">
-                            <label>Your Name*</label>
-                            <input type="text" class="form-control" placeholder="Your name">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Phone*</label>
-                            <input type="text" class="form-control" placeholder="Phone">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Email*</label>
-                            <input type="email" class="form-control" placeholder="Email ID">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Company Name*</label>
-                            <input type="text" class="form-control" placeholder="Company name">
-                        </div>
-
-                        <div class="col-12">
-                            <label>Message</label>
-                            <textarea rows="2" class="form-control message-box" placeholder="Message"></textarea>
-                        </div>
-
-                        <div class="col-12 text-end mt-4">
-                            <button class="btn send-btn">Send Message</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+    <section class="hero-gallery">
+        <div class="hero-content">
+            <span class="label">Gallery</span>
+            <h1>Our Work. Our Process. Our<br>Commitment.</h1>
         </div>
     </section>
 
 
 
+    <section class="gallery-section">
+        <div class="container-fluid">
 
+            <!-- Intro Paragraph -->
+            <p class="gallery-text text-center">
+                At Alyssa Metal, every shipment, every yard operation, and every quality check <br> reflects our
+                dedication to excellence. Explore our gallery to see how we <br>source, handle, sort, and ship
+                high-quality scrap metals to clients worldwide.
+            </p>
 
+            <!-- GALLERY GRID -->
+            <div class="row g-3 mt-5">
 
-    <section class="" style="background-color: black; padding-top: 3rem;">
-        <div class="brand-strip">
-            <div class="container-fluid">
-                <div class="brand-row">
-
-                    <img src="assets/img/images/alyssa-swapgo-logo.png" alt="Swop" class="brand-logo">
-                    <img src="assets/img/images/alyssa-wattcharge-logo.png" alt="WattCharge" class="brand-logo">
-
-                    <!-- <div class="brand-center"> -->
-                    <img src="assets/img/images/alyssa-bmntech-logo.png" alt="BMNTech" class="brand-logo">
-                    <!-- <span class="brand-text">Driven by technology,<br>defined by trust</span> -->
-                    <!-- </div> -->
-
-                    <img src="assets/img/images/alyssa-wattcharge-logo.png" alt="WattCharge" class="brand-logo">
-                    <img src="assets/img/images/alyssa-swapgo-logo.png" alt="Swop" class="brand-logo">
-
+                <!-- Row 1 -->
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery1.jpg" class="img-fluid">
+                    </div>
                 </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <p class="gallery-caption">
+                            High-quality material<br>handling at our processing<br>yards.
+                        </p>
+                        <!-- <img src="assets/img/images/alyssa-gallery1.jpg" class="img-fluid mt-2"> -->
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery2.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery3.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="col-md-3">
+                    <div class="gallery-item">
+
+                        <img src="assets/img/images/alyssa-gallery4.jpg" class="img-fluid mt-2">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery5.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery6.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <p class="gallery-caption">
+                            Strict quality checks ensure<br>material consistency in every<br>batch.
+                        </p>
+                        <!-- <img src="assets/img/images/alyssa-gallery1.jpg" class="img-fluid mt-2"> -->
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <p class="gallery-caption">
+                            Seamless logistics and<br>export support for global<br>trade.
+                        </p>
+                        <!-- <img src="assets/img/images/alyssa-gallery1.jpg" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery7.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <p class="gallery-caption">
+                            Secure and efficient <br> container loading for global <br> shipments.
+                        </p>
+                        <!-- <img src="assets/img/images/alyssa-gallery1.jpg" class="img-fluid"> -->
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery8.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery9.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery10.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery11.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="gallery-item">
+                        <img src="assets/img/images/alyssa-gallery12.jpg" class="img-fluid">
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
+
+
+
+
+   
 
     <section class="scrap-cta">
         <div class="scrap-content">
@@ -671,8 +599,6 @@
         <!-- Right original lines -->
         <div class="lines right-lines"></div>
     </section>
-
-
 
     <footer class="footer-section" style="background-color: #070707;">
         <div class="container-fluid">
