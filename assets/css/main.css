@@ -2570,7 +2570,13 @@ span {
   font-size: 14px;
 }
 .header-main .main-menu ul li a:hover {
-  color: var(--theme) !important;
+  color: #008e3e !important;
+}
+.header-main .main-menu ul li a.active {
+  color: #008e3e !important;
+  text-decoration: underline;
+  /* text-decoration-thickness: 2px; */
+  /* text-underline-offset: 4px; */
 }
 .header-main .main-menu ul li .submenu {
   position: absolute;
@@ -3695,7 +3701,7 @@ span {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--theme);
+  background: black;
   border-radius: 10px;
 }
 

@@ -10,7 +10,7 @@
     <meta name="author" content="Valorwide">
     <meta name="description" content="Axispro Business & corporate agency HTML template">
     <!-- ======== Page title ============ -->
-    <title>Alyssa Metal Home</title>
+    <title>Alyssa Metal About us</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/alyssa-favicon.png">
     <!--<< Bootstrap min.css >>-->
@@ -222,7 +222,7 @@
             width: 100%;
             height: 100%;
             background: url('assets/img/images/alyssa-about1.jpg') center/cover no-repeat;
-            transition: all 1.5s ease;
+            transition: all 1.8s ease;
         }
 
         /* GREEN CARD */
@@ -238,7 +238,7 @@
             color: white;
             padding: 3rem 3rem 3rem 3rem;
             border-radius: 6px;
-            transition: all 1.5s ease;
+            transition: all 1.8s ease;
             opacity: 0;
         }
 
@@ -416,7 +416,7 @@
 <body class="body-bg">
 
     <!-- Preloader Start -->
-    <div id="preloader" class="preloader">
+    <!-- <div id="preloader" class="preloader">
         <div class="animation-preloader">
             <div class="spinner">
             </div>
@@ -455,7 +455,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--<< Mouse Cursor Start >>-->
     <!-- <div class="mouse-cursor cursor-outer"></div>
@@ -594,12 +594,12 @@
                                             </a>
                                         </li>
                                         <li class=" active d-xl-none">
-                                            <a href="team.html" class="border-none">
+                                            <a href="index.html" class="border-none">
                                                 Home
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">About Us</a>
+                                            <a class="active" href="about-us.html">About Us</a>
                                         </li>
                                         <li class="">
                                             <a href="services.html">
@@ -811,7 +811,7 @@
                 Our team is here to help you with reliable and efficient service.
             </p>
 
-            <button class="cta-btn">Contact Us</button>
+             <a href="contact.html" class="cta-btn " style="padding: 0.8rem 1.3rem; ">Contact Us</a>
         </div>
 
         <!-- Left mirrored lines -->
@@ -900,25 +900,50 @@
     </footer>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const offerSection = document.getElementById("offerSection");
 
-    <script>
-        const offer = document.getElementById("offerSection");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    offerSection.classList.add("active");
+                }
+            });
+        },
+        {
+            threshold: 0.7, // Trigger when 70% visible
+        }
+    );
 
-        offer.addEventListener("click", () => {
-            offer.classList.toggle("active");
-        });
-    </script>
+    observer.observe(offerSection);
+});
+</script>
 
 
 
 
-    <script>
-        const expertiseSection = document.getElementById("expertiseSection");
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const section = document.getElementById("expertiseSection");
 
-        expertiseSection.addEventListener("click", () => {
-            expertiseSection.classList.toggle("active");
-        });
-    </script>
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    section.classList.add("active"); 
+                } 
+            });
+        },
+        {
+            threshold: 0.7, // trigger animation when 70% visible
+        }
+    );
+
+    observer.observe(section);
+});
+</script>
 
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
